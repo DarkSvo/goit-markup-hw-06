@@ -11,6 +11,9 @@
     --logo-color: #afb1b8;
     --btn-active-color: #188ce8;
     --card-item-gap: 30px;
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-duration: 250ms;
+    --timing-function1: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   a {
     text-decoration: none;
@@ -765,6 +768,65 @@ a[class*='footer'] {
 }
 .join-us-logo {
   fill: currentColor;
+}
+/* -------subscription----------- */
+.subscription { margin-left: 93px;
+}
+.subscription-text {
+  margin-bottom: 20px;
+  margin-top: 12px;
+  color: var(--background-color1);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.subscription input {
+  width: 358px;
+  padding: 15px 16px;
+  background-color: var(--background-color4);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: var(--font-color4);
+  margin-right: 12px;
+}
+.subscription-btn {
+  cursor: pointer;
+  width: 200px;
+  padding: 10px 28px 10px 29px;
+  text-align: left;
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  border: 0;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+
+  position: relative;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition-property: background-color;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--timing-function);
+}
+.subscription-btn:hover,
+.subscription-btn:focus {
+  color: #FFFFFF;
+            background-color: #138cef;;
+}
+
+.subscription svg {
+  fill: var(--text-white-color);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 28px;
+  top: 13px;
 }
 /* --------------Modal Window---------------------------- */
 .backdrop {
